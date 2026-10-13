@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 800" width="1240" height="800" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57534e"/>
+    </marker>
+    <marker id="arrM" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a8a29e"/>
+    </marker>
+    <style>
+      .t  { fill:#1c1917; font-size:15px; font-weight:600; }
+      .s  { fill:#44403c; font-size:12.5px; }
+      .m  { fill:#78716c; font-size:12px; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .cap { fill:#78716c; font-size:11px; letter-spacing:1.2px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .box { fill:#ffffff; stroke:#d6d3d1; stroke-width:1.2; }
+      .chip{ fill:#f5f5f4; stroke:#e7e5e4; stroke-width:1; }
+    </style>
+  </defs>
+
+  <rect width="1240" height="800" fill="#fafaf9"/>
+
+  <!-- Operator -->
+  <rect x="30" y="24" width="360" height="44" rx="22" fill="#1c1917"/>
+  <text x="210" y="51" text-anchor="middle" fill="#fafaf9" font-size="14" font-weight="600">Operator · one browser tab</text>
+  <line x1="210" y1="68" x2="210" y2="96" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Mac -->
+  <rect x="30" y="100" width="360" height="550" rx="14" class="box"/>
+  <text x="50" y="128" class="cap">MAC · OPERATOR STATION</text>
+
+  <rect x="50" y="144" width="320" height="160" rx="10" class="chip"/>
+  <text x="66" y="170" class="t">Hub <tspan class="mono m">hub.py :8400</tspan></text>
+  <text x="66" y="194" class="s">• one column per arm: live cameras, status,</text>
+  <text x="66" y="212" class="s">   Run / Scene ready / Success / Failure / Stop</text>
+  <text x="66" y="234" class="s">• keeps one ssh tunnel per arm up, restarts it</text>
+  <text x="66" y="256" class="s">• forwards an allow-list of <tspan class="mono">/arm/&lt;name&gt;/api/*</tspan></text>
+  <text x="66" y="278" class="s">   with a same-origin check</text>
+
+  <rect x="50" y="320" width="320" height="104" rx="10" class="chip"/>
+  <text x="66" y="346" class="t">Fleet report <tspan class="mono m">fleet_report.py</tspan></text>
+  <text x="66" y="370" class="s">• rsync every box's logs (no raw frames)</text>
+  <text x="66" y="392" class="s">• offline box → skipped, last copy kept</text>
+  <text x="66" y="412" class="s">• joins log + state trace + LLM wire per trial</text>
+
+  <rect x="50" y="440" width="320" height="190" rx="10" class="chip"/>
+  <text x="66" y="466" class="t">Fleet dashboard <tspan class="mono m">/fleet/eval/</tspan></text>
+  <text x="66" y="490" class="s">• success rate with Wilson 95% CI</text>
+  <text x="66" y="512" class="s">• human verdict vs proprioceptive auto-score</text>
+  <text x="66" y="534" class="s">• cross-embodiment σ (XEbench protocol)</text>
+  <text x="66" y="556" class="s">• cost and time per success, arm-s vs LLM-s</text>
+  <text x="66" y="578" class="s">• synced replay: 2 cameras + gripper / jaw</text>
+  <text x="66" y="596" class="s">   traces + the model's own notes</text>
+  <text x="66" y="618" class="s">• static page, filters in plain JS</text>
+
+  <!-- tunnel label -->
+  <text x="465" y="92" text-anchor="middle" class="cap">SSH -N -L</text>
+  <text x="465" y="108" text-anchor="middle" class="cap">OVER TAILSCALE</text>
+
+  <!-- tunnel arrows hub -> launchers -->
+  <path d="M370,200 C455,200 470,186 536,186" fill="none" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M370,224 C455,224 470,376 536,376" fill="none" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M370,248 C455,248 470,566 536,566" fill="none" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- rsync arrows logs -> fleet report -->
+  <path d="M540,252 C470,252 460,360 372,362" fill="none" stroke="#a8a29e" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arrM)"/>
+  <path d="M540,442 C470,442 460,380 372,378" fill="none" stroke="#a8a29e" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arrM)"/>
+  <path d="M540,632 C470,632 460,398 372,394" fill="none" stroke="#a8a29e" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arrM)"/>
+  <text x="440" y="470" text-anchor="middle" class="m" font-style="italic">rsync logs</text>
+
+  <!-- Linux boxes -->
+  <g>
+    <rect x="540" y="100" width="670" height="170" rx="14" class="box"/>
+    <rect x="540" y="100" width="6" height="170" rx="3" fill="#2f6fdb"/>
+    <text x="562" y="128" class="cap">LINUX BOX 1</text>
+    <text x="660" y="128" class="t" fill="#2f6fdb">AgileX Piper + AgileX gripper</text>
+  </g>
+  <g>
+    <rect x="540" y="290" width="670" height="170" rx="14" class="box"/>
+    <rect x="540" y="290" width="6" height="170" rx="3" fill="#e8642c"/>
+    <text x="562" y="318" class="cap">LINUX BOX 2</text>
+    <text x="660" y="318" class="t" fill="#e8642c">I2RT YAM + 4310 linear gripper</text>
+  </g>
+  <g>
+    <rect x="540" y="480" width="670" height="170" rx="14" class="box"/>
+    <rect x="540" y="480" width="6" height="170" rx="3" fill="#1f9d6b"/>
+    <text x="562" y="508" class="cap">LINUX BOX 3</text>
+    <text x="660" y="508" class="t" fill="#1f9d6b">uFactory xArm + gripper</text>
+  </g>
+
+  <!-- chips per box: launcher / run / hardware -->
+  <g id="row1">
+    <rect x="560" y="146" width="170" height="80" rx="9" class="chip"/>
+    <text x="574" y="170" class="t" font-size="14">Launcher</text>
+    <text x="574" y="190" class="mono m">:8301, localhost only</text>
+    <text x="574" y="210" class="m">pty → operator keys</text>
+
+    <line x1="730" y1="186" x2="756" y2="186" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+    <rect x="760" y="146" width="230" height="80" rx="9" class="chip"/>
+    <text x="774" y="170" class="t" font-size="14">inspect-robots run</text>
+    <text x="774" y="190" class="m">agent policy ⇄ LLM API</text>
+    <text x="774" y="210" class="m">embodiment plugin + guards</text>
+
+    <line x1="990" y1="186" x2="1016" y2="186" stroke="#57534e" stroke-width="1.5" marker-end="url(#arr)"/>
+    <rect x="1020" y="146" width="170" height="80" rx="9" class="chip"/>
+    <text x="1034" y="170" class="t" font-size="14">Arm + gripper</text>
+    <text x="1034" y="190" class="m">CAN or Ethernet</text>
+    <text x="1034" y="210" class="m">overhead + wrist cam</text>
+
+    <text x="574" y="256" class="m">logs/ (EvalLog, state trace, LLM wire, frames) · viewer <tspan class="mono">:8300</tspan></text>
+  </g>
+  <use href="#row1" y="190"/>
+  <use href="#row1" y="380"/>
+
+  <!-- Shared contract band -->
+  <rect x="30" y="676" width="1180" height="96" rx="14" fill="#1c1917"/>
+  <text x="54" y="706" class="cap" fill="#a8a29e">SHARED BY EVERY ARM · aligned.py</text>
+  <text x="54" y="734" fill="#fafaf9" font-size="15" font-weight="600">One control surface: <tspan class="mono" font-weight="400">move_to [x_mm, y_mm, z_mm, gripper]</tspan> · 10 Hz · 30 mm/s · same workspace, start pose, prompt, cameras</text>
+  <text x="54" y="758" fill="#d6d3d1" font-size="13">Each arm keeps only its hardware: IK or TCP pose, gripper stroke, table height, its own safety backstops. A run is a child of its Linux box, so a dropped hub, tunnel or Wi-Fi never cuts the control loop.</text>
+</svg>

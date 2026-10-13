@@ -1,0 +1,92 @@
+{
+ "piper": {
+  "stats": {
+   "trials": 39,
+   "k": 32,
+   "n": 38,
+   "sr": 0.8421052631578947,
+   "ci": [
+    0.6958287736272311,
+    0.9255623777627731
+   ],
+   "t_med": 109.0,
+   "arm_med": 27.800000000000004
+  },
+  "gif": {
+   "frames": 101,
+   "seconds": 14.4,
+   "speed": 6.3,
+   "bytes": 8535526,
+   "size": [
+    1000,
+    394
+   ]
+  },
+  "trial": "piper-cube-pick-place_6795303b/lego-brick-front-e0",
+  "embodiment": "Piper + agilex \u00b7 overhead + wrist",
+  "task": "Pick & place \u00b7 lego brick \u2192 box",
+  "wall_s": 90.9,
+  "calls": 17,
+  "when": "2026-10-12T21:50:30.326333+00:00"
+ },
+ "yam": {
+  "stats": {
+   "trials": 11,
+   "k": 7,
+   "n": 11,
+   "sr": 0.6363636363636364,
+   "ci": [
+    0.35379677689163724,
+    0.8483377638586862
+   ],
+   "t_med": 197.3,
+   "arm_med": 78.80000000000001
+  },
+  "gif": {
+   "frames": 125,
+   "seconds": 15.6,
+   "speed": 10.3,
+   "bytes": 9068305,
+   "size": [
+    1000,
+    394
+   ]
+  },
+  "trial": "yam-cube-pick-place_f0c5ad93/lego-brick-front-e0",
+  "embodiment": "YAM + linear4310 \u00b7 ? \u00b7 +xyz",
+  "task": "Pick & place \u00b7 lego brick \u2192 box",
+  "wall_s": 161.0,
+  "calls": 18,
+  "when": "2026-10-13T00:16:49.549417+00:00"
+ },
+ "xarm": {
+  "stats": {
+   "trials": 15,
+   "k": 10,
+   "n": 15,
+   "sr": 0.6666666666666666,
+   "ci": [
+    0.41713125151212976,
+    0.8482389930530876
+   ],
+   "t_med": 228.85,
+   "arm_med": 74.55
+  },
+  "gif": {
+   "frames": 52,
+   "seconds": 13.0,
+   "speed": 12.6,
+   "bytes": 4184978,
+   "size": [
+    1000,
+    466
+   ]
+  },
+  "trial": "xarm-cube-pick-place_280afda8/lego-brick-front-e0",
+  "embodiment": "xArm + xarm \u00b7 wrist + overhead \u00b7 +xyz",
+  "task": "Pick & place \u00b7 lego brick \u2192 box",
+  "wall_s": 164.0,
+  "calls": 27,
+  "when": "2026-10-13T01:37:50.680713+00:00"
+ }
+}
