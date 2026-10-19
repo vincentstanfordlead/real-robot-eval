@@ -1,29 +1,32 @@
 {
  "piper": {
   "stats": {
-   "trials": 39,
-   "k": 32,
-   "n": 38,
-   "sr": 0.8421052631578947,
+   "trials": 66,
+   "k": 51,
+   "n": 65,
+   "sr": 0.7846153846153846,
    "ci": [
-    0.6958287736272311,
-    0.9255623777627731
+    0.6703320947133157,
+    0.8671336236895105
    ],
-   "t_med": 109.0,
-   "arm_med": 27.800000000000004
+   "t_med": 122.0,
+   "arm_med": 32.30000000000001,
+   "cosmos_agree": 32,
+   "cosmos_n": 41
   },
-  "gif": {
+  "clip": {
    "frames": 101,
    "seconds": 14.4,
    "speed": 6.3,
-   "bytes": 8535526,
+   "gif_bytes": 8489227,
+   "webp_bytes": 1576082,
    "size": [
-    1000,
-    394
+    1210,
+    361
    ]
   },
   "trial": "piper-cube-pick-place_6795303b/lego-brick-front-e0",
-  "embodiment": "Piper + agilex \u00b7 overhead + wrist",
+  "embodiment": "Piper",
   "task": "Pick & place \u00b7 lego brick \u2192 box",
   "wall_s": 90.9,
   "calls": 17,
@@ -31,62 +34,68 @@
  },
  "yam": {
   "stats": {
-   "trials": 11,
-   "k": 7,
-   "n": 11,
-   "sr": 0.6363636363636364,
+   "trials": 30,
+   "k": 24,
+   "n": 30,
+   "sr": 0.8,
    "ci": [
-    0.35379677689163724,
-    0.8483377638586862
+    0.6269395261897256,
+    0.9049502189759876
    ],
-   "t_med": 197.3,
-   "arm_med": 78.80000000000001
+   "t_med": 172.5,
+   "arm_med": 49.69999999999999,
+   "cosmos_agree": 13,
+   "cosmos_n": 15
   },
-  "gif": {
-   "frames": 125,
-   "seconds": 15.6,
+  "clip": {
+   "frames": 97,
+   "seconds": 12.1,
    "speed": 10.3,
-   "bytes": 9068305,
+   "gif_bytes": 8417530,
+   "webp_bytes": 1422570,
    "size": [
-    1000,
-    394
+    1210,
+    361
    ]
   },
-  "trial": "yam-cube-pick-place_f0c5ad93/lego-brick-front-e0",
-  "embodiment": "YAM + linear4310 \u00b7 ? \u00b7 +xyz",
+  "trial": "yam-cube-pick-place_2a9ffc96/lego-brick-front-e0",
+  "embodiment": "YAM",
   "task": "Pick & place \u00b7 lego brick \u2192 box",
-  "wall_s": 161.0,
+  "wall_s": 125.0,
   "calls": 18,
-  "when": "2026-10-13T00:16:49.549417+00:00"
+  "when": "2026-10-15T06:19:01.831591+00:00"
  },
  "xarm": {
   "stats": {
-   "trials": 15,
-   "k": 10,
-   "n": 15,
-   "sr": 0.6666666666666666,
+   "trials": 32,
+   "k": 24,
+   "n": 32,
+   "sr": 0.75,
    "ci": [
-    0.41713125151212976,
-    0.8482389930530876
+    0.5789310822975338,
+    0.8674775601737845
    ],
-   "t_med": 228.85,
-   "arm_med": 74.55
+   "t_med": 276.95,
+   "arm_med": 172.0,
+   "cosmos_agree": 17,
+   "cosmos_n": 19
   },
-  "gif": {
-   "frames": 52,
-   "seconds": 13.0,
+  "clip": {
+   "frames": 62,
+   "seconds": 15.5,
    "speed": 12.6,
-   "bytes": 4184978,
+   "gif_bytes": 3929879,
+   "webp_bytes": 774406,
    "size": [
-    1000,
-    466
+    1210,
+    361
    ]
   },
-  "trial": "xarm-cube-pick-place_280afda8/lego-brick-front-e0",
-  "embodiment": "xArm + xarm \u00b7 wrist + overhead \u00b7 +xyz",
+  "trial": "xarm-cube-pick-place_307d56e8/lego-brick-front-e0",
+  "embodiment": "xArm",
   "task": "Pick & place \u00b7 lego brick \u2192 box",
-  "wall_s": 164.0,
-  "calls": 27,
-  "when": "2026-10-13T01:37:50.680713+00:00"
+  "wall_s": 195.8,
+  "calls": 32,
+  "when": "2026-10-13T00:56:21.582255+00:00"
  }
 }
